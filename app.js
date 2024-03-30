@@ -1,15 +1,19 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-
+const mongoose = require('mongoose');
 const userRoute = require('./routes/user');
+
+require('dotenv').config();
 
 const app = express();
 
+app.use(express.json());
 app.use(bodyParser.json());
 
-// const postRoute = require('./routes/posts');
-// app.use('/posts', postRoute);
+require("./config/database").connect();
+
 
 app.use("/user", userRoute);
 
 module.exports = app;
+

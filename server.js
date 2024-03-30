@@ -4,4 +4,6 @@ const PORT = 5000;
 
 const server = http.createServer(app);
 
-server.listen(PORT);
+server.listen(PORT,()=>{
+    console.log("app is running on PORT:5000");
+})

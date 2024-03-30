@@ -1,0 +1,7 @@
+{
+    "env": {
+        "JWT_KEY": "secret",
+        "EMAIL_USERNAME": "muskj12345@gmail.com",
+        "EMAIL_PASSWORD": "Manoj890"
+    }
+}

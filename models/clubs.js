@@ -1,16 +1,20 @@
 const mongoose = require('mongoose');
 
-const userSchema = mongoose.Schema(
+const clubSchema = mongoose.Schema(
   {
-    firstName: {
+    clubName: {
       type: String,
       required: true
     },
-    lastName: {
+    collegeUni: {
       type: String,
       required: true
     },
     email: {
+        type: String,
+        required: true
+      },
+    city: {
       type: String,
       required: true
     },
@@ -30,4 +34,4 @@ const userSchema = mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("Users", userSchema);
+module.exports = mongoose.model("Clubs", clubSchema);
